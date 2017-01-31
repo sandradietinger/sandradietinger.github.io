@@ -47,7 +47,7 @@ a.anchor {
 .intro-header {
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/intro_background.png) no-repeat center center;
+    background: url(../img/intro_background.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -92,6 +92,10 @@ a.anchor {
 
     .intro-divider {
         width: 100%;
+    }
+
+    .intro-profile-image{
+        max-width: 50%;
     }
 }
 
@@ -147,7 +151,7 @@ a.anchor {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner.png) no-repeat center center;
+    background: url(../img/banner.jpg) no-repeat center center;
     background-size: cover;
 }
 

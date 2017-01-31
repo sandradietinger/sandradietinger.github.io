@@ -53,14 +53,19 @@
     
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-	<li>
-          <a href="/#portfolio">Portfolio</a>
         <li>
-	<li>
-          <a href="/#contact">Contact</a>
+          
+          <a href="/#portfolio" class="hidden-xs">Portfolio</a>
+          <a href="/#portfolio" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Portfolio</a>
         </li>
-	<li>
+        <li>
+          
+          <a href="/#contact" class="hidden-xs">Contact</a>
+          <a href="/#contact" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Contact</a>
+        </li>
+        <li>
           <a href="/about">About</a>
+          
         </li>
       </ul>
     </div>
