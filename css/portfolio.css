@@ -8,7 +8,6 @@ body,
 html {
     width: 100%;
     height: 100%;
-    /*font-family: "Source Sans Pro", sans-serif;*/
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -18,18 +17,46 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .topnav {
-    background-color: black;
-    border-bottom: 1px solid black;
+    background-color: teal;
+    border: none;
+}
+
+.navbar-inverse .navbar-brand{
+    color: white;
+    font-weight: 400;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.navbar-inverse .navbar-brand:hover{
+    color: #E7E7E7;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #E7E7E7;
+}
+
+@media(max-width:767px){
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    -webkit-box-shadow: 0px 25px 40px -10px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 25px 40px -10px rgba(0,0,0,0.4);
+    box-shadow: 0px 25px 40px -10px rgba(0,0,0,0.4);
+    border-color: teal;
+    }
 }
 
 .lead {
     font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 30px;
+    font-weight: 200;
+    margin-bottom: 0px;
 }
 
 /* Put spacer on top of every page and offset anchros to make sure the navbar doesn't overlap content! */
@@ -45,40 +72,32 @@ a.anchor {
 }
 
 .intro-header {
-    text-align: center;
     color: #f8f8f8;
-    background: url(../img/intro_background.jpg) no-repeat center center;
-    background-size: cover;
+    background: teal;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .intro-message {
-    position: relative;
-    padding-top: 10%;/*20%;*/
-    padding-bottom: 10%;/*20%;*/
+    text-align: center;
 }
 
 .intro-profile-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
-    max-width: 25%;
 }
 
 .intro-message > h1 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 5em;
+    font-weight: 400;
 }
 
 .intro-divider {
     width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-weight: 200;
 }
 
 @media(max-width:767px) {
@@ -99,6 +118,37 @@ a.anchor {
     }
 }
 
+/*-------------hover of image + vertical alignment---------------*/
+
+.hovereffect {
+    position:relative;
+    overflow:hidden;
+}
+.hovereffect:hover img {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+}
+
+img {
+    transform: scale(1);
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.vbottom {
+    display: inline-block;
+    vertical-align: bottom;
+    float: none;
+}
+
+/*----------------------------*/
+
 .network-name {
     text-transform: uppercase;
     font-size: 14px;
@@ -107,8 +157,8 @@ a.anchor {
 }
 
 .section-heading {
-    margin-top: 0px;
-    margin-bottom: 30px;
+    margin-top: 24px;
+    margin-bottom: 8px;
 }
 
 .section-heading-spacer {
@@ -130,10 +180,10 @@ a.anchor {
     padding: 30px 0;
     text-align: center;
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 400;
     border-top: 1px solid #505050;
-    border-bottom: 1px solid #505050;/*#e7e7e7;*/
-    background-color: #505050;/*#f8f8f8;*/
+    border-bottom: 1px solid #505050;
+    background-color: #505050;
     color:white;
 }
 
@@ -144,21 +194,17 @@ a.anchor {
 
 .content-section-b { 
     padding: 50px 0;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
 }
 
 .banner {
-    padding: 100px 0;
-    color: #f8f8f8;
-    background: url(../img/banner.jpg) no-repeat center center;
+    padding: 80px 0;
+    color: black;
+    background: url(../img/banner2.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .banner h2 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 3em;
 }
 
 .banner ul {
@@ -180,24 +226,12 @@ a.anchor {
 @media(max-width:767px) {
     .banner h2 {
         margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 3em;
-    }
-
-    ul.banner-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons > li:last-child {
-        margin-bottom: 0;
     }
 }
 
 footer {
     padding: 10px 0;
-    background-color: black;
+    background-color: #EBECF0;
     text-align: center;
     height: 40px;
 }
@@ -206,9 +240,7 @@ footer {
 #wrap {
   min-height: 100%;
   height: auto;
-  /* Negative indent footer by its height */
   margin: 0 auto -40px;
-  /* Pad bottom by footer height */
   padding: 0 0 40px;
 }
 
@@ -253,7 +285,7 @@ p.copyright {
 
 .btn-social-dark {
     display: inline-block;
-    color: #00a7a7; /*#333333;*/
+    color: #00a7a7;
     background: transparent;
     margin-left: -4px;
     margin-top: 10px;
@@ -297,6 +329,7 @@ p.copyright {
 
 .portfolio-text {
     font-size: 18px;
+    font-weight: 300;
 }
 
 .portfolio-container {
@@ -310,6 +343,7 @@ p.copyright {
 
 .portfolio-process-text {
     font-size:18px;
+    font-weight: 300;
 }
 
 .portfolio-process-image-margin {
@@ -320,7 +354,7 @@ p.copyright {
 .portfolio-section-heading-spacer {
     float: center;
     width: 200px;
-    border-top: 3px solid #00a7a7; /*#e7e7e7;*/
+    border-top: 3px solid #00a7a7; 
     margin-top: 50px;
 }
 
@@ -337,6 +371,7 @@ p.copyright {
     background: #00a7a7;
     border: none;
     color: white;
+    font-weight: 400;
     padding: 16px 32px;
     margin-bottom: 30px;
     text-align: center;
